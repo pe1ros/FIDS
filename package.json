@@ -1,17 +1,20 @@
 {
   "name": "FIDS",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "lint": "eslint .",
-    "start": "react-native start",
-    "test": "jest"
+    "ios": "react-native run-ios --simulator=\"iPhone 14 Pro\"",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "start": "watchman watch-del-all && react-native start --reset-cache",
+    "test": "jest",
+    "pods": "cd ios && pod install && cd .."
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.72.3"
+    "react-native": "0.72.3",
+    "react-native-webview": "^13.10.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
