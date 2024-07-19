@@ -125,7 +125,7 @@ public class MainApplication extends Application implements ReactApplication {
                 @Override
                 public void run() {
                     Log.d("MainApplication", "Recreating React context");
-                    instanceManager.onHostDestroy();
+//                    instanceManager.onHostDestroy();
                     instanceManager.recreateReactContextInBackground();
                 }
             });
